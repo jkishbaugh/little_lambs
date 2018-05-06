@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/little_lamb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:contentDescription="@string/title"
+            android:src="@drawable/little_lamb_flip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/title_margin"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:gravity="center"
+            android:text="@string/mission"
+            android:textAlignment="center"
+            android:textColor="@color/secondaryColor"
+            android:textSize="@dimen/mission_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <ImageView
+            android:id="@+id/children"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:cropToPadding="true"
+            android:src="@drawable/children"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mission" />
+
+
+        <Button
+            android:id="@+id/about_title"
+            style="@style/menuHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/about_title"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/children"
+            android:onClick="toggleVisibility"/>
+
+        <LinearLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/about_title">
+
+            <TextView
+                android:id="@+id/about_us"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/about_us" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/contact"
+            style="@style/menuHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/contact"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about"
+            android:onClick="toggleVisibility"/>
+
+        <LinearLayout
+            android:id="@+id/contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/contact">
+
+            <TextView
+                android:id="@+id/contact_phone"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoLink="phone"
+                android:textColorLink="@color/secondaryTextColor"
+                android:drawableLeft="@drawable/phone"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/phone" />
+
+            <TextView
+                android:id="@+id/contact_email"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoLink="email"
+                android:textColorLink="@color/secondaryTextColor"
+                android:drawableLeft="@drawable/email"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/email" />
+
+            <TextView
+                android:id="@+id/contact_map"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoLink="map"
+                android:drawableLeft="@drawable/map"
+                android:drawableStart="@drawable/map"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/address" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/how_to_help"
+            style="@style/menuHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/how_to_help"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_info"
+            android:onClick="toggleVisibility"/>
+
+        <LinearLayout
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/how_to_help">
+
+            <TextView
+                android:id="@+id/comfort"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/comfortkit1"
+                android:drawableStart="@drawable/comfortkit1"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/comfort" />
+
+            <TextView
+                android:id="@+id/hygiene"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/comfortkit2"
+                android:drawableStart="@drawable/comfortkit2"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/hygiene"/>
+
+            <TextView
+                android:id="@+id/homemade"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/homemade_items"
+                android:drawableStart="@drawable/homemade_items"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/homemade" />
+
+            <TextView
+                android:id="@+id/hospital"
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/getwell3"
+                android:drawableStart="@drawable/getwell3"
+                android:drawablePadding="@dimen/standard_margin"
+                android:text="@string/hospital" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/donate"
+            style="@style/menuHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/donate"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/help"
+            android:onClick="toggleVisibility"/>
+
+        <LinearLayout
+            android:id="@+id/donate_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/donate">
+
+            <TextView
+                style="@style/menuItem"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/hours" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

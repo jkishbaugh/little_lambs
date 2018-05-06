@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="menu_margin_left">32dp</dimen>
+    <dimen name="title_text_size">36sp</dimen>
+    <dimen name="mission_text_size">24sp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="title_margin">26dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="button_vertical_margin">2dp</dimen>
+</resources>

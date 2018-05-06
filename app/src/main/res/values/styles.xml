@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryDarkColor</item>
+    </style>
+    <style name="menuHeader">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:background">@drawable/my_border</item>
+        <item name="android:textSize">@dimen/mission_text_size</item>
+        <item name="android:padding">@dimen/standard_margin</item>
+        <item name="android:layout_marginLeft">@dimen/standard_margin</item>
+        <item name="android:layout_marginRight">@dimen/standard_margin</item>
+        <item name="android:layout_marginBottom">@dimen/button_vertical_margin</item>
+    </style>
+    <style name="menuItem">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:background">@color/secondaryColor</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:layout_marginLeft">@dimen/standard_margin</item>
+        <item name="android:layout_marginRight">@dimen/standard_margin</item>
+        <item name="android:padding">@dimen/standard_margin</item>
+    </style>
+    <style name="selectedMenuHeader">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:background">@color/secondaryDarkColor</item>
+        <item name="android:textSize">@dimen/mission_text_size</item>
+        <item name="android:padding">@dimen/standard_margin</item>
+        <item name="android:layout_marginLeft">@dimen/standard_margin</item>
+        <item name="android:layout_marginRight">@dimen/standard_margin</item>
+    </style>
+
+</resources>

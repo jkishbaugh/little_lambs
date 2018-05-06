@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">little_lambs</string>
+    <string name="title">Little Lambs Foundation for Kids</string>
+    <string name="mission">Providing a little bit of comfort in every bag</string>
+    <string name="about_title">About Us</string>
+    <string name="about_us">We are a non profit organization that provides comfort kits to children who are transitioning into foster care, in emergency shelter, hospitalized.</string>
+    <string name="contact">Contact Us</string>
+    <string name="address">1125 West 400 North Logan, UT 84321</string>
+    <string name="email">littlelambsofut@aol.com</string>
+    <string name="phone">435-764-4439</string>
+    <string name="how_to_help">How you can Help</string>
+    <string name="comfort">Put Together a Comfort Kit</string>
+    <string name="hygiene">Organize a Hygiene Kit</string>
+    <string name="homemade">Make Homemade Items</string>
+    <string name="hospital">Put Together a Hospital Kit</string>
+    <string name="donate">Donate</string>
+    <string name="hours"> Donations are accepted Thursday from 4-7pm at </string>
+</resources>
